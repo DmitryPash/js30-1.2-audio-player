@@ -18,20 +18,22 @@ let list_of_music = [
         img: 'lemonade'
     },
      {
-        author: 'William',
+        author: 'Dua Lipa',
         name_of_song: 'Don`t Star Now',
         src: 'dontstartnow',
         img: 'dontstartnow'
     }
 ]
-
+let playBtnIcon = D.querySelector('.player-controls__icon--play');
 function playAudio() {
   audio.play();
+  playBtnIcon.src = './assets/svg/pause.png'
   isPlay = !isPlay
   changeInfo()
 }
 function pauseAudio() {
   audio.pause();
+  playBtnIcon.src = './assets/svg/play.png'
   isPlay = !isPlay
 }
 
